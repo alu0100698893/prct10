@@ -151,4 +151,20 @@ describe Bibliografia do
     end
     
   end
+  
+  describe "#Programacion Funcional"do
+    before :each do
+      @nodo1 = Nodo.new(@libro_1)
+      @nodo2 = Nodo.new(@libro_2)
+      @lista_2 = Doble_lista.new #lista para comprobar que esta ordenada
+      @lista_2.insert_head(@nodo1)
+      @lista_2.insert_head(@nodo2)
+    end
+      
+    it "#Existe un metodo para ordenar y este ordena correctamente" do
+      
+        expect(@lista_2.to_s).to eq("Chelistamsky, D. (August 27, 2009). Pro Git 2009th Edition. (pro) (2) (96). O’Reilly Media.\nMessi, L. & Hernandez, X. (28 July 2016). Sport. En (Eds.), Histria De Un Pasado: Los Dioses Del Futbol (15) (1) (132). Barcelona\n") 
+      
+    end
+  end
 end
