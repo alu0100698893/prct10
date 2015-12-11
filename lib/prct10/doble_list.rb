@@ -113,3 +113,27 @@ class Doble_lista
 		   actual = actual.siguiente
 		end
     end
+    
+      def ordenar_list #Usaremos el algoritmo de la burbuja para ordenar
+    
+       return if contador <= 1
+       
+			ordenacion = true
+			while (ordenacion)
+				ordenacion = false
+				aux = @head
+				aux_1 = @head[:siguiente]
+				
+				    while (aux_1 != nil)
+				    
+					    if(aux[:value] > aux_1[:value])
+						    aux[:value], aux_1[:value] = aux_1[:value], aux[:value]
+						    ordenacion = true
+					    end
+					    aux = aux_1
+					    aux_1 = aux_1[:siguiente]
+				    end
+			end
+    end 
+   
+end
