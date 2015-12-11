@@ -172,6 +172,11 @@ describe Bibliografia do
         expect(@revista.autores).to eq("Rusbell, F.")
         
     end
+    
+    it "Impresion del titulo de manera correcta" do
+        expect(@periodico.titulo).to eq("El Club De La Comedia")
+         expect(@doc_electronico.titulo).to eq("La Moda Hipster")
+    end
   end
 end
   
