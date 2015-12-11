@@ -178,5 +178,34 @@ describe Bibliografia do
          expect(@doc_electronico.titulo).to eq("La Moda Hipster")
     end
   end
+  
+  describe "#El metodo comparable funciona de manera correcta" do
+    
+    before :each do
+      @nodo1 = Nodo.new(@libro_1)
+      @nodo2 = Nodo.new(@libro_2)
+      @nodo3 = Nodo.new(@periodico)
+      @nodo4 = Nodo.new(@doc_electronico)
+      @lista_2 = Doble_lista.new #lista para comprobar que esta ordenada
+      @lista_3 = Doble_lista.new #lista para comprobar que ordenamos por el titulo
+      @lista_2.insert_head(@nodo1)
+      @lista_2.insert_head(@nodo2)
+      @lista_3.insert_head(@nodo3)
+      @lista_3.insert_head(@nodo4)
+    end
+    
+    it "#Ordenar solo en base al autor" do
+      
+       expect(@lista_2.to_s).to eq("Chelistamsky, D. (August 27, 2009). Pro Git 2009th Edition. (pro) (2) (96). O’Reilly Media.\nMessi, L. & Hernandez, X. (28 July 2016). Sport. En (Eds.), Histria De Un Pasado: Los Dioses Del Futbol (15) (1) (132). Barcelona\n") 
+      
+    end
+    
+    it "#Si los autores coinciden, ordenar en base al titulo" do
+       expect(@lista_3.to_s).to eq("Villuela, P. (14 Febrero 2010). El Club De La Comedia. Mundo deportivo, pp. 2.\nVilluela, J. (12 Abril 2015). La Moda Hipster (1), [web]. La casa amarilla. Disponible en: www.lacasaamarilla.com [2015,2,6].\n")
+     end
+    
+  end
+
 end
+
   
