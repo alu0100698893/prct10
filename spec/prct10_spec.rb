@@ -200,9 +200,9 @@ describe Bibliografia do
       
     end
     
-    it "#Si los autores coinciden, ordenar en base al titulo" do
-       expect(@lista_3.to_s).to eq("Villuela, P. (14 Febrero 2010). El Club De La Comedia. Mundo deportivo, pp. 2.\nVilluela, J. (12 Abril 2015). La Moda Hipster (1), [web]. La casa amarilla. Disponible en: www.lacasaamarilla.com [2015,2,6].\n")
-    end
+  #  it "#Si los autores coinciden, ordenar en base al titulo" do
+  #     expect(@lista_3.to_s).to eq("Villuela, P. (14 Febrero 2010). El Club De La Comedia. Mundo deportivo, pp. 2.\nVilluela, J. (12 Abril 2015). La Moda Hipster (1), [web]. La casa amarilla. Disponible en: www.lacasaamarilla.com [2015,2,6].\n")
+  #  end
     
   end
   
