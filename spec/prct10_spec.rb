@@ -166,5 +166,12 @@ describe Bibliografia do
         expect(@lista_2.to_s).to eq("Chelistamsky, D. (August 27, 2009). Pro Git 2009th Edition. (pro) (2) (96). O’Reilly Media.\nMessi, L. & Hernandez, X. (28 July 2016). Sport. En (Eds.), Histria De Un Pasado: Los Dioses Del Futbol (15) (1) (132). Barcelona\n") 
       
     end
+    
+     it "Impresion de nombre y apellido correcta" do
+        expect(@libro_nuevo.autores).to eq("Martinez, A. & Cole, N.")
+        expect(@revista.autores).to eq("Rusbell, F.")
+        
+    end
   end
 end
+  
